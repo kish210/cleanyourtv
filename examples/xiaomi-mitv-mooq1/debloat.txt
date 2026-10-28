@@ -1,0 +1,51 @@
+# Xiaomi Mi TV (MiTV-MOOQ1, codename tarzan, MediaTek), Android TV 10, firmware QTG3.200305.006.6148
+# Package set matches the MOOQ0/MOOQ2 (croods) lists; every entry below was checked present with `pm list packages`.
+#
+# Apply:   TV_HOST=<tv ip> tools/disable.sh examples/xiaomi-mitv-mooq1/debloat.txt
+# Undo:    TV_HOST=<tv ip> tools/restore.sh examples/xiaomi-mitv-mooq1/debloat.txt
+# Everything is DISABLED for user 0, not uninstalled. Comment out any line you want to keep.
+# Provisional: not yet reboot-checked on this model.
+#
+# Stock launcher: com.google.android.tvlauncher is the HOME app and is NOT in this list.
+# Kept deliberately:
+#   com.xiaomi.android.tvsetup.partnercustomizer   Bluetooth remote pairing
+#   com.mediatek.tvinput, com.mediatek.wwtv.tvcenter, mitv.service, com.mediatek.tv.service   HDMI, AV, tuner
+#   com.xiaomi.mitv.updateservice                  firmware updates
+#   com.google.android.tungsten.setupwraith        can own the saved Wi-Fi network
+
+# ---- Xiaomi and Google telemetry ----
+com.miui.tv.analytics
+com.xiaomi.statistic
+com.google.android.feedback                     # crash / feedback reporting
+
+# ---- Xiaomi content, ads and recommendation rows ----
+com.mitv.tvhome.atv                             # PatchWall
+com.mitv.tvhome.michannel                       # Mi recommendation channels
+com.mitv.tvhome.mitvplus                        # Xiaomi TV+ FAST channels
+com.xm.webcontent                               # Xiaomi promo web content
+android.autoinstalls.config.xiaomi.amelie       # partner app auto-install config
+
+# ---- Background services not needed ----
+com.xiaomi.mitv.tvmanager                       # "TV Manager" cleaner
+com.xiaomi.amazon.alexa                         # Alexa bridge
+com.mitv.gallery                                # Mi Gallery
+
+# ---- Preloaded apps ----
+com.mitv.tvlock                                 # Xiaomi TV lock / parental password
+com.xiaomo.tv.milegal                           # Xiaomi legal / privacy screens
+com.mstar.android.tv.disclaimercustomization    # vendor disclaimer screen
+com.mediatek.wwtv.webview                       # vendor web view shell
+fusion.android.tv.demo                          # retail store demo loop
+com.xiaomi.mimusic2                             # Mi Music
+com.google.android.play.games                   # Play Games
+mediatek.factorymenu.ui                         # factory menu: disabled, never launched
+
+# ---- Optional, off by default (uncomment to disable) ----
+#com.google.android.tvrecommendations           # stock launcher recommendation rows
+#com.mitv.dream                                 # Xiaomi screensaver
+#com.google.android.backdrop                    # Google ambient screensaver
+#com.google.android.katniss                     # voice assistant (the mic button stops working)
+#com.google.android.youtube.tvmusic
+#com.google.android.videos                      # Play Movies & TV
+#com.xiaomi.mitv.mediaexplorer                  # USB media player
+#com.mitv.videoplayer                           # Mi video player

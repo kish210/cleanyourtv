@@ -1,0 +1,6 @@
+{
+  "tv": "Xiaomi Mi TV (MiTV-MOOQ1, tarzan)",
+  "os": "Android TV 10",
+  "brand": "Xiaomi",
+  "notes": "Stock launcher is com.google.android.tvlauncher (no PatchWall as HOME). Same Xiaomi/MediaTek stack as MOOQ0/MOOQ2: PatchWall, Mi analytics, MiChannel, Xiaomi TV+, TV Manager, Alexa bridge, partner auto-install config, factory menu; voice, screensavers and USB/video players left on by choice; HDMI/AV/tuner stack, partnercustomizer (BLE remote pairing) and updater kept"
+}
